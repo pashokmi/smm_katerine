@@ -1,10 +1,11 @@
 .portfolio {
+  padding-top: 140px;
   margin-bottom: 140px;
   text-align: center;
-  @include media(768px){
+  @include media(768px) {
     margin-bottom: 40px;
   }
-  
+
   &__filters {
     display: flex;
     flex-wrap: wrap;
@@ -18,8 +19,8 @@
     line-height: 160%;
     cursor: pointer;
     border: 2px solid $grey;
-    padding:0 5px;
-    @include media(768px){
+    padding: 0 5px;
+    @include media(768px) {
       width: 100%;
       margin: 0;
     }
@@ -32,6 +33,7 @@
     display: flex;
     overflow-x: scroll;
     overflow-y: hidden;
+    cursor: grabbing;
     user-select: none;
     @include media(479px) {
       margin-right: 0;
@@ -57,6 +59,7 @@
       // height: 320px;
     }
   }
+  
 }
 .mixitup-control-active {
   transition: color 0.3s ease-in-out, border 1.3s;
