@@ -1669,7 +1669,7 @@ body.ie ._ibg img {
 .header {
   position: relative;
   z-index: 1;
-  height: 100vh;
+  min-height: 100vh;
   color: #fff;
   background-position: top center;
   background-size: cover;
@@ -2012,6 +2012,7 @@ body.ie ._ibg img {
   display: -ms-flexbox;
   display: flex;
   overflow-x: scroll;
+  overflow-y: hidden;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;

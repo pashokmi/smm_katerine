@@ -31,6 +31,7 @@
   &__inner {
     display: flex;
     overflow-x: scroll;
+    overflow-y: hidden;
     user-select: none;
     @include media(479px) {
       margin-right: 0;

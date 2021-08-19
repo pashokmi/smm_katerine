@@ -1,8 +1,7 @@
 .header {
   position: relative;
   z-index: 1;
-  // margin-bottom: 140px;
-  height: 100vh;
+  min-height: 100vh;
   color: $white;
   background-position: top center;
   background-size: cover;
