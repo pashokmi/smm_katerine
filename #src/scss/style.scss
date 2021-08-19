@@ -1,0 +1,107 @@
+
+@import "mixins";
+
+@import "fonts";
+
+$fontFamily: "Crimson Pro";
+$fontSize: 18px;
+
+$minWidth: 320px;
+$maxWidth: 1920;
+$maxWidthContainer: 1170;
+$md1: $maxWidthContainer + 12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+
+$mainColor: #333;
+// $white: #906339;
+$white: #fff;
+$accent: #906339;
+$grey: #e3dbd8;
+//</
+@import "null";
+body {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 1.6;
+  color: $mainColor;
+
+  &._lock {
+    overflow: hidden;
+  }
+}
+
+.sr-only {
+  overflow: hidden;
+  width: 0;
+  height: 0px;
+  font-size: 0;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1200px;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 100%;
+  min-height: 100%;
+  // &._loaded {
+  // }
+}
+
+@import "forms";
+@import "libs";
+@import "ui";
+
+@import "popup";
+@import "header";
+@import "components/_smm";
+@import "components/_about";
+@import "components/_skills";
+@import "components/_portfolio";
+@import "components/_contact";
+@import "footer";
+@import "home";
+
+.title {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 60px;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 130%;
+  @include media(768px) {
+    font-size: 36px;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 40px;
+    width: 100%;
+    height: 15px;
+    background-color: rgba(222, 157, 35, 0.2);
+    transform: translateX(-50%);
+    z-index: 0;
+  }
+}
+.btn {
+  padding: 12px 24px;
+  background-color: $accent;
+  color: $white;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 130%;
+}
+
+.page {
+  flex: 1 1 auto;
+}
+

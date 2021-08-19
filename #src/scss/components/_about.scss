@@ -1,0 +1,9 @@
+.about {
+  margin-bottom: 140px;
+  @include media(768px){
+    margin-bottom: 40px;
+  }
+  &__text:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
