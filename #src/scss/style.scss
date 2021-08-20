@@ -30,6 +30,16 @@ body {
     overflow: hidden;
   }
 }
+.visually-hidden {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px);
+	clip: rect(1px, 1px, 1px, 1px);
+	padding: 0 !important;
+	border: 0 !important;
+	height: 1px !important;
+	width: 1px !important;
+	overflow: hidden;
+}
 
 .sr-only {
   overflow: hidden;
@@ -64,6 +74,7 @@ body {
 @import "components/_skills";
 @import "components/_portfolio";
 @import "components/_services";
+@import "components/_price";
 @import "components/_contact";
 @import "footer";
 @import "home";
@@ -121,6 +132,15 @@ body {
   font-weight: 600;
   font-size: 18px;
   line-height: 130%;
+  opacity: 1;
+  transition: opacity 0.2s ease-in;
+  &:hover{
+opacity: 0.8;
+  }
+}
+
+.thanks{
+  margin-bottom: 300px;
 }
 
 .page {

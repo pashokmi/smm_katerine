@@ -1,9 +1,9 @@
 .contact {
-  padding-top: 140px;
-  margin-bottom: 140px;
+  padding: 140px 0;
+  
+  background-color: $grey;
   @include media(768px){
     padding: 50px 0;
-    margin-bottom: 40px;
   }
   &__inner {
     display: flex;
@@ -91,7 +91,7 @@
     }
   }
   &__input {
-    background-color: $grey;
+    background-color: $white;
     padding: 13px 15px;
     margin: 10px 0 30px 0;
     width: 100%;
@@ -109,7 +109,7 @@
   &__text {
     width: 100%;
     padding: 13px 15px;
-    background-color: $grey;
+    background-color: $white;
     min-height: 115px;
     max-height: 200px;
     margin-top: 10px;
