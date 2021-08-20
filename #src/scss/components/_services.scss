@@ -2,25 +2,46 @@
   background-color: $grey;
   text-align: left;
   padding: 140px 0;
+  @include media(768px){
+    padding: 50px 0;
+  }
   &__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    @include media(768px){
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
   &__descr{
     margin-right: 30px;
+
   }
   &__img {
     object-fit: cover;
     max-width: 500px;
     max-height: 700px;
+    @include media(992px){
+      max-width: 400px;
+    max-height: 600px;
+    }
+    @include media(480px){
+      max-width: 300px;
+    max-height: 500px;
+    }
   }
   &__title {
     font-weight: 700;
-    font-size: 40px;
+    font-size: 36px;
     line-height: 1;
     margin-bottom: 10px;
+    @include media(768px){
+      font-size: 28px;
+    }
+    @include media(480px){
+      font-size: 24px;
+    }
   }
   &__list {
     margin-bottom: 20px;
@@ -31,5 +52,8 @@
   &__item {
     list-style: disc;
     margin-left: 40px;
+    @include media(480px){
+      font-size: 16px;
+    }
   }
 }

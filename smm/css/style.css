@@ -1892,13 +1892,14 @@ body.ie ._ibg img {
 
 .menu__link {
   color: #fff;
-  -webkit-transition: color 0.3s;
-  -o-transition: color 0.3s;
-  transition: color 0.3s;
+  border-bottom: 2px solid transparent;
+  -webkit-transition: border-bottom 0.3s;
+  -o-transition: border-bottom 0.3s;
+  transition: border-bottom 0.3s;
 }
 
 .menu__link:hover {
-  opacity: 0.6;
+  border-bottom: 2px solid #fff;
 }
 
 .menu__item:not(:last-child) {
@@ -1947,7 +1948,7 @@ body.ie ._ibg img {
 }
 
 .skills__list {
-  max-width: 665px;
+  max-width: 420px;
   width: 100%;
   font-weight: 600;
 }
@@ -2057,8 +2058,6 @@ body.ie ._ibg img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
 
 .services__descr {
@@ -2074,7 +2073,7 @@ body.ie ._ibg img {
 
 .services__title {
   font-weight: 700;
-  font-size: 40px;
+  font-size: 36px;
   line-height: 1;
   margin-bottom: 10px;
 }
@@ -2294,6 +2293,76 @@ body.ie ._ibg img {
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
   z-index: 0;
+  -webkit-animation-name: btitle;
+          animation-name: btitle;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes btitle {
+  0% {
+    opacity: 0;
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    -webkit-transform: scale(0.2) translate(-400%, 0%);
+            transform: scale(0.2) translate(-400%, 0%);
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+
+  50% {
+    opacity: 1;
+    -webkit-transform-origin: 50% 0%;
+            transform-origin: 50% 0%;
+    -webkit-transform: scale(1) translate(200%, 0%);
+            transform: scale(1) translate(200%, 0%);
+    -webkit-transform: rotateX(90deg);
+            transform: rotateX(90deg);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform-origin: 50% 0%;
+            transform-origin: 50% 0%;
+    -webkit-transform: scale(0.2) translate(-400%, 0%);
+            transform: scale(0.2) translate(-400%, 0%);
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+}
+
+@keyframes btitle {
+  0% {
+    opacity: 0;
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    -webkit-transform: scale(0.2) translate(-400%, 0%);
+            transform: scale(0.2) translate(-400%, 0%);
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+
+  50% {
+    opacity: 1;
+    -webkit-transform-origin: 50% 0%;
+            transform-origin: 50% 0%;
+    -webkit-transform: scale(1) translate(200%, 0%);
+            transform: scale(1) translate(200%, 0%);
+    -webkit-transform: rotateX(90deg);
+            transform: rotateX(90deg);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform-origin: 50% 0%;
+            transform-origin: 50% 0%;
+    -webkit-transform: scale(0.2) translate(-400%, 0%);
+            transform: scale(0.2) translate(-400%, 0%);
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
 }
 
 .btn {
@@ -2378,7 +2447,7 @@ body.ie ._ibg img {
 
   .menu__list {
     position: absolute;
-    background-color: rgba(35, 82, 222, 0.8);
+    background-color: rgba(222, 163, 35, 0.72);
     border-radius: 25px 0px 25px 160px;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -2409,6 +2478,11 @@ body.ie ._ibg img {
   .portfolio__img {
     max-width: 260px;
   }
+
+  .services__img {
+    max-width: 400px;
+    max-height: 600px;
+  }
 }
 
 @media (max-width: 991.98px) {
@@ -2428,6 +2502,7 @@ body.ie ._ibg img {
 
   .smm {
     margin-bottom: 40px;
+    padding: 50px 0;
   }
 
   .about {
@@ -2443,29 +2518,47 @@ body.ie ._ibg img {
   }
 
   .skills__list {
-    max-width: 375px;
+    padding: 10px;
   }
 
   .skills__item {
-    margin-bottom: 25px;
+    margin-bottom: 10px;
     max-width: 375px;
   }
 
   .portfolio {
     margin-bottom: 40px;
+    padding-top: 50px;
   }
 
   .portfolio__filter {
     width: 100%;
-    margin: 0;
+    margin: 0 0 5px 0;
+  }
+
+  .services {
+    padding: 50px 0;
+  }
+
+  .services__wrapper {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .services__title {
+    font-size: 28px;
   }
 
   .contact {
+    padding: 50px 0;
     margin-bottom: 40px;
   }
 
   .title {
-    font-size: 36px;
+    font-size: 32px;
   }
 }
 
@@ -2483,8 +2576,20 @@ body.ie ._ibg img {
 
 @media only screen and (max-width: 480px) {
   .skills__list {
-    max-width: 175px;
-    margin-right: 70px;
+    max-width: 375px;
+  }
+
+  .services__img {
+    max-width: 300px;
+    max-height: 500px;
+  }
+
+  .services__title {
+    font-size: 24px;
+  }
+
+  .services__item {
+    font-size: 16px;
   }
 }
 

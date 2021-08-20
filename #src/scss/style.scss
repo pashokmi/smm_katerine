@@ -1,4 +1,3 @@
-
 @import "mixins";
 
 @import "fonts";
@@ -15,7 +14,6 @@ $md3: 767.98;
 $md4: 479.98;
 
 $mainColor: #333;
-// $white: #906339;
 $white: #fff;
 $accent: #906339;
 $grey: #e3dbd8;
@@ -77,8 +75,10 @@ body {
   font-weight: 700;
   font-size: 48px;
   line-height: 130%;
+  
+
   @include media(768px) {
-    font-size: 36px;
+    font-size: 32px;
   }
   &::before {
     content: "|";
@@ -86,9 +86,31 @@ body {
     position: absolute;
     right: -20px;
     top: 0;
-    // background-color: rgba(222, 157, 35, 0.2);
     transform: translateX(-50%);
     z-index: 0;
+    animation-name: btitle;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+}
+@keyframes btitle {
+  0% {
+    opacity: 0;
+    transform-origin: 50% 50%;
+    transform: scale(0.2) translate(-400%, 0%);
+    transform: rotateX(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform-origin: 50% 0%;
+    transform: scale(1) translate(200%, 0%);
+    transform: rotateX(90deg);
+  }
+  100% {
+    opacity: 0;
+    transform-origin: 50% 0%;
+    transform: scale(0.2) translate(-400%, 0%);
+    transform: rotateX(0deg);
   }
 }
 .btn {
@@ -104,4 +126,3 @@ body {
 .page {
   flex: 1 1 auto;
 }
-

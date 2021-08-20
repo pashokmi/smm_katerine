@@ -174,7 +174,7 @@
     font-weight: 600;
     @include media(992px) {
       position: absolute;
-      background-color: rgba(35, 82, 222, 0.8);
+      background-color: rgba(222, 163, 35, 0.72);
       border-radius: 25px 0px 25px 160px;
       flex-wrap: wrap;
       right: -15px;
@@ -198,13 +198,14 @@
   }
   &__link {
     color: $white;
-    transition: color 0.3s;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s;
     @include media(992px) {
       padding: 25px 5px;
       display: inline-block;
     }
     &:hover {
-      opacity: 0.6;
+      border-bottom: 2px solid $white;
     }
   }
   &__item:not(:last-child) {

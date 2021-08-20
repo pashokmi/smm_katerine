@@ -29,26 +29,26 @@
 
       </address>
 
-      <form class="form" action="#">
+      <form class="form" action="mail.php" method="POST">
 
         <div class="form__inner">
           <label class="form__label">
             Ваше ім'я
-            <input class="form__input" type="text" name="Имя" placeholder="Введіть ім'я" required>
+            <input class="form__input" type="text" name="name" placeholder="Введіть ім'я" required>
           </label>
 
           <label class="form__label">
             Номер телефону
-            <input class="form__input" type="tel" name="Телефон" placeholder="+38 (098) 111 11 11" required>
+            <input class="form__input" type="tel" name="phone" placeholder="+38 (098) 111 11 11" required>
           </label>
         </div>
 
         <label class="form__textarea">
           Ваше повідомлення
 
-          <textarea class="form__text" name="сообщение" placeholder="Введіть текст"></textarea>
+          <textarea class="form__text" name="msg" placeholder="Введіть текст"></textarea>
         </label>
-        <button class="btn">Відправити</button>
+        <button class="btn" type="submit">Відправити</button>
       </form>
     </div>
   </div>
