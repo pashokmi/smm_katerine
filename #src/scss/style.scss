@@ -125,18 +125,55 @@ body {
   }
 }
 .btn {
-  padding: 12px 24px;
-  background-color: $accent;
-  color: $white;
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 130%;
+  text-decoration: none;
+  display: inline-block;
+  padding: 20px 30px;
+  margin: 10px 20px;
+  position: relative;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, .4);
+  background: none;
+  font-weight: 300;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.btn:before, .btn:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  box-sizing: border-box;
+}
+.btn:before {
+  bottom: 0;
+  left: 0;
+  border-left: 1px solid #906339d9;
+  border-top: 1px solid #906339d9;
+  transition: 0s ease opacity .8s, .2s ease width .4s, .2s ease height .6s;
+}
+.btn:after {
+  top: 0;
+  right: 0;
+  border-right: 1px solid #906339d9;
+  border-bottom: 1px solid #906339d9;
+  transition: 0s ease opacity .4s, .2s ease width, .2s ease height .2s;
+}
+.btn:hover:before, 
+.btn:hover:after {
+  height: 100%;
+  width: 100%;
   opacity: 1;
-  transition: opacity 0.2s ease-in;
-  &:hover{
-opacity: 0.8;
-  }
+}
+.btn:hover:before {
+  transition: 0s ease opacity 0s, .2s ease height, .2s ease width .2s;
+}
+.btn:hover:after {
+  transition: 0s ease opacity .4s, .2s ease height .4s, .2s ease width .6s;
+}
+.btn:hover {
+  background: rgba(196, 165, 136, 0.4);
 }
 
 .thanks{

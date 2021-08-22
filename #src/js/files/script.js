@@ -20,7 +20,7 @@ menuLink.forEach(item => {
 window.addEventListener('scroll', scrollMenu);
 
 function scrollMenu() {
-  if (window.pageYOffset <= 10) {
+  if (window.pageYOffset <= 6) {
      menuScroll.classList.remove('menu--active');
   }
   else{
