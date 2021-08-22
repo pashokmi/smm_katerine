@@ -1920,7 +1920,6 @@ body.ie ._ibg img {
 .smm {
   background-color: #e3dbd8;
   padding: 140px 0;
-  margin-bottom: 140px;
 }
 
 .smm__text:not(:last-child) {
@@ -1928,7 +1927,7 @@ body.ie ._ibg img {
 }
 
 .about {
-  margin-bottom: 140px;
+  padding: 140px 0;
 }
 
 .about__text:not(:last-child) {
@@ -1989,8 +1988,7 @@ body.ie ._ibg img {
 }
 
 .portfolio {
-  padding-top: 140px;
-  margin-bottom: 140px;
+  padding: 140px;
   text-align: center;
 }
 
@@ -2598,6 +2596,19 @@ body.ie ._ibg img {
     padding-top: 15px;
   }
 
+  .menu--active {
+    background-color: #906339d9;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 15px 15px;
+    z-index: 20;
+    -webkit-transition: background-color 0.3s ease-in;
+    -o-transition: background-color 0.3s ease-in;
+    transition: background-color 0.3s ease-in;
+  }
+
   .menu__btn {
     display: block;
   }
@@ -2605,11 +2616,11 @@ body.ie ._ibg img {
   .menu__list {
     position: absolute;
     background-color: #906339d9;
-    border-radius: 25px 0px 25px 160px;
+    border-radius: 0 0 25px 160px;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     right: -15px;
-    top: 65px;
+    top: 60px;
     min-height: 350px;
   }
 
@@ -2625,6 +2636,7 @@ body.ie ._ibg img {
   }
 
   .menu__link {
+    width: 100%;
     padding: 10px 5px;
     display: inline-block;
   }
@@ -2660,15 +2672,16 @@ body.ie ._ibg img {
 
   .smm {
     margin-bottom: 40px;
-    padding: 50px 0;
+    padding: 65px 0;
   }
 
   .about {
     margin-bottom: 40px;
+    padding: 65px 0;
   }
 
   .skills {
-    padding: 40px 0;
+    padding: 65px 0;
   }
 
   .skills__photo {
@@ -2686,7 +2699,7 @@ body.ie ._ibg img {
 
   .portfolio {
     margin-bottom: 40px;
-    padding-top: 50px;
+    padding: 65px 0;
   }
 
   .portfolio__filter {
@@ -2695,7 +2708,7 @@ body.ie ._ibg img {
   }
 
   .services {
-    padding: 50px 0;
+    padding: 65px 0;
   }
 
   .services__wrapper {
@@ -2711,11 +2724,11 @@ body.ie ._ibg img {
   }
 
   .price {
-    padding: 50px 0;
+    padding: 65px 0;
   }
 
   .contact {
-    padding: 50px 0;
+    padding: 65px 0;
   }
 
   .title {
@@ -2751,6 +2764,10 @@ body.ie ._ibg img {
 
   .services__item {
     font-size: 16px;
+  }
+
+  .price__title {
+    font-size: 20px;
   }
 }
 

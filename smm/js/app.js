@@ -790,6 +790,8 @@ animate({
 const menuBtnActive = document.querySelector('.menu__btn');
 const menuActive = document.querySelector('.menu__list');
 const menuLink = document.querySelectorAll('.menu__link');
+const menuScroll = document.querySelector('.menu');
+
 
 menuBtnActive.addEventListener('click', () => {
   menuBtnActive.classList.toggle('menu__btn--active');
@@ -804,9 +806,16 @@ menuLink.forEach(item => {
 });
 
 
+window.addEventListener('scroll', scrollMenu);
 
-
-
+function scrollMenu() {
+  if (window.pageYOffset <= 10) {
+     menuScroll.classList.remove('menu--active');
+  }
+  else{
+     menuScroll.classList.add('menu--active');
+  }
+}
 
 
 let mixer = mixitup('.portfolio');
