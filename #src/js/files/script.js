@@ -21,12 +21,23 @@ window.addEventListener('scroll', scrollMenu);
 
 function scrollMenu() {
   if (window.pageYOffset <= 6) {
-     menuScroll.classList.remove('menu--active');
-  }
-  else{
-     menuScroll.classList.add('menu--active');
+    menuScroll.classList.remove('menu--active');
+  } else {
+    menuScroll.classList.add('menu--active');
   }
 }
 
+
+const popupOpen = document.querySelector('.call-back');
+const popupClose = document.querySelector('.popup__close');
+const popupModal = document.querySelector('.popup');
+
+popupClose.addEventListener('click', () => {
+ popupModal.classList.remove('show');
+});
+
+popupOpen.addEventListener('click', () => {
+  popupModal.classList.add('show');
+});
 
 let mixer = mixitup('.portfolio');

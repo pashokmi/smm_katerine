@@ -131,6 +131,52 @@ body._lock {
   overflow: hidden;
 }
 
+.call-back {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  font-size: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  z-index: 99;
+  background-image: url("../img/icons/call.svg");
+  -webkit-animation-name: call;
+          animation-name: call;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes call {
+  0% {
+    rotate: 0deg;
+  }
+
+  50% {
+    rotate: 45deg;
+  }
+
+  100% {
+    rotate: 0deg;
+  }
+}
+
+@keyframes call {
+  0% {
+    rotate: 0deg;
+  }
+
+  50% {
+    rotate: 45deg;
+  }
+
+  100% {
+    rotate: 0deg;
+  }
+}
+
 .visually-hidden {
   position: absolute !important;
   clip: rect(1px 1px 1px 1px);
@@ -1585,7 +1631,7 @@ body.ie ._ibg img {
 
 .popup::before {
   content: "";
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.7);
   position: fixed;
   width: 100%;
   height: 100%;
@@ -1660,18 +1706,24 @@ body.ie ._ibg img {
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
-  background-color: #fff;
+  background-color: #a3a3a3;
   padding: 50px;
   width: 100%;
   max-width: 800px;
 }
 
+.popup__form {
+  margin: 0 auto;
+  text-align: center;
+}
+
 .popup__close {
-  width: 15px;
-  height: 15px;
+  width: 40px;
+  height: 45px;
   position: absolute;
-  top: 0px;
-  right: 0px;
+  background-size: cover;
+  top: 5px;
+  right: 5px;
   cursor: pointer;
   z-index: 30;
   background: url("../img/icons/close.svg") 0 0 no-repeat;
