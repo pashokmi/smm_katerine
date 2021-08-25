@@ -1,6 +1,7 @@
 .price {
+  background-color: #999A9C;
+  color: $white;
   padding: 140px 0;
-  margin-bottom: 10px;
   @include media(768px) {
     padding: 65px 0;
   }
@@ -66,7 +67,8 @@
     padding: 20px;
     border: 1px solid #888;
     border-top: 1px solid transparent;
-    background-color: #e3dbd8af;
+    background-color: #999A9C;
+  
   }
   &__content-item {
     list-style: disc;

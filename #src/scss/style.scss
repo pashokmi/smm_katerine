@@ -15,9 +15,10 @@ $md4: 479.98;
 
 $mainColor: #333;
 $white: #fff;
-$accent: #906339;
-// $accent: #f8e913;
-$grey: #e3dbd8;
+// $accent: #906339;
+$accent: rgba(255, 193, 7,);
+// $grey: #e3dbd8;
+$grey: rgba(255, 193, 7, 0.5);
 //</
 @import "null";
 body {
@@ -41,22 +42,28 @@ height: 50px;
 border-radius: 50%;
 z-index: 99;
 background-image: url('../img/icons/call.svg');
-animation-name: call;
+animation-name: callBack;
 animation-duration: 2s;
 animation-iteration-count: infinite;
+transition: transform 0.3s;
+
 }
 
-@keyframes call {
+@keyframes callBack {
   0%{
-    rotate: 0deg;
+    transform: rotate(0deg);
   }
+  
   50%{
-    rotate: 45deg;
+    transform: rotate(35deg);
   }
+  
+  
   100%{
-    rotate: 0deg;
+    transform: rotate(0deg);
   }
 }
+
 .visually-hidden {
 	position: absolute !important;
 	clip: rect(1px 1px 1px 1px);
