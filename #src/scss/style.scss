@@ -16,7 +16,7 @@ $md4: 479.98;
 $mainColor: #333;
 $white: #fff;
 // $accent: #906339;
-$accent: rgba(255, 193, 7,);
+$accent: rgba(255, 193, 7);
 // $grey: #e3dbd8;
 $grey: rgba(255, 193, 7, 0.5);
 //</
@@ -27,52 +27,49 @@ body {
   font-size: 18px;
   line-height: 1.6;
   color: $mainColor;
-  &._lock {
-    overflow: hidden;
-  }
+  // background-color: rgba(255, 193, 7, 0.5);
+  
 }
 
-.call-back{
-position: fixed;
-right: 20px;
-bottom: 20px;
-font-size: 0;
-width: 50px;
-height: 50px;
-border-radius: 50%;
-z-index: 99;
-background-image: url('../img/icons/call.svg');
-animation-name: callBack;
-animation-duration: 2s;
-animation-iteration-count: infinite;
-transition: transform 0.3s;
-
+.call-back {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  font-size: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  z-index: 99;
+  background-image: url("../img/icons/call.svg");
+  animation-name: callBack;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  transition: transform 0.3s;
 }
 
 @keyframes callBack {
-  0%{
+  0% {
     transform: rotate(0deg);
   }
-  
-  50%{
+
+  50% {
     transform: rotate(35deg);
   }
-  
-  
-  100%{
+
+  100% {
     transform: rotate(0deg);
   }
 }
 
 .visually-hidden {
-	position: absolute !important;
-	clip: rect(1px 1px 1px 1px);
-	clip: rect(1px, 1px, 1px, 1px);
-	padding: 0 !important;
-	border: 0 !important;
-	height: 1px !important;
-	width: 1px !important;
-	overflow: hidden;
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
 }
 
 .sr-only {
@@ -93,8 +90,6 @@ transition: transform 0.3s;
   overflow: hidden;
   width: 100%;
   min-height: 100%;
-  // &._loaded {
-  // }
 }
 
 @import "forms";
@@ -120,7 +115,6 @@ transition: transform 0.3s;
   font-weight: 700;
   font-size: 48px;
   line-height: 130%;
-  
 
   @include media(768px) {
     font-size: 32px;
@@ -165,14 +159,15 @@ transition: transform 0.3s;
   margin: 10px 20px;
   position: relative;
   color: white;
-  border: 1px solid rgba(255, 255, 255, .4);
+  border: 1px solid rgba(247, 218, 1, 0.59);
   background: none;
   font-weight: 300;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
-.btn:before, .btn:after {
+.btn:before,
+.btn:after {
   content: "";
   position: absolute;
   width: 0;
@@ -185,32 +180,32 @@ transition: transform 0.3s;
   left: 0;
   border-left: 1px solid #906339d9;
   border-top: 1px solid #906339d9;
-  transition: 0s ease opacity .8s, .2s ease width .4s, .2s ease height .6s;
+  transition: 0s ease opacity 0.8s, 0.2s ease width 0.4s, 0.2s ease height 0.6s;
 }
 .btn:after {
   top: 0;
   right: 0;
   border-right: 1px solid #906339d9;
   border-bottom: 1px solid #906339d9;
-  transition: 0s ease opacity .4s, .2s ease width, .2s ease height .2s;
+  transition: 0s ease opacity 0.4s, 0.2s ease width, 0.2s ease height 0.2s;
 }
-.btn:hover:before, 
+.btn:hover:before,
 .btn:hover:after {
   height: 100%;
   width: 100%;
   opacity: 1;
 }
 .btn:hover:before {
-  transition: 0s ease opacity 0s, .2s ease height, .2s ease width .2s;
+  transition: 0s ease opacity 0s, 0.2s ease height, 0.2s ease width 0.2s;
 }
 .btn:hover:after {
-  transition: 0s ease opacity .4s, .2s ease height .4s, .2s ease width .6s;
+  transition: 0s ease opacity 0.4s, 0.2s ease height 0.4s, 0.2s ease width 0.6s;
 }
 .btn:hover {
-  background: rgba(196, 165, 136, 0.4);
+  background-color: #ffc107bd;;
 }
 
-.thanks{
+.thanks {
   margin-bottom: 300px;
 }
 

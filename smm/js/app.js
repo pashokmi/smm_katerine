@@ -787,6 +787,21 @@ animate({
 			Element.prototype.msMatchesSelector;
 	}
 })();
+let swiper = new Swiper(".services__slider", {
+  effect: "cube",
+  grabCursor: true,
+  cubeEffect: {
+    shadow: true,
+    slideShadows: true,
+    shadowOffset: 20,
+    shadowScale: 0.94,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+  },
+});
+
+
 const menuBtnActive = document.querySelector('.menu__btn');
 const menuActive = document.querySelector('.menu__list');
 const menuLink = document.querySelectorAll('.menu__link');
@@ -832,23 +847,11 @@ popupOpen.addEventListener('click', () => {
 
 
  
-   let swiper = new Swiper(".services__slider", {
-     effect: "cube",
-     grabCursor: true,
-     cubeEffect: {
-       shadow: true,
-       slideShadows: true,
-       shadowOffset: 20,
-       shadowScale: 0.94,
-     },
-     pagination: {
-       el: ".swiper-pagination",
-     },
-   }); 
+   
  
 
 
-let mixer = mixitup('.portfolio');
+
 // let scr_body = document.querySelector('body');
 let scr_blocks = document.querySelectorAll('._scr-sector');
 let scr_items = document.querySelectorAll('._scr-item');
