@@ -2002,7 +2002,7 @@ body.ie ._ibg img {
 
 .smm {
   background-color: rgba(255, 193, 7, 0.5);
-  padding: 140px 0;
+  padding: 100px 0;
 }
 
 .smm__descr {
@@ -2057,7 +2057,7 @@ body.ie ._ibg img {
 }
 
 .about {
-  padding: 140px 0;
+  padding: 100px 0;
 }
 
 .about__text:not(:last-child) {
@@ -2065,7 +2065,7 @@ body.ie ._ibg img {
 }
 
 .skills {
-  padding: 140px 0;
+  padding: 100px 0;
   background-color: #999a9c;
   color: #fff;
 }
@@ -2115,13 +2115,12 @@ body.ie ._ibg img {
 }
 
 .portfolio {
-  background-color: #999A9C;
-  color: #fff;
-  padding: 140px;
+  background-color: rgba(255, 193, 7, 0.5);
+  padding: 100px 0;
   text-align: center;
 }
 
-.portfolio__filters {
+.portfolio__items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2130,60 +2129,56 @@ body.ie ._ibg img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 60px;
-}
-
-.portfolio__filter {
-  margin-right: 30px;
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 160%;
-  cursor: pointer;
-  border: 2px solid rgba(255, 193, 7, 0.5);
-  padding: 0 5px;
-}
-
-.portfolio__filter:last-child {
-  margin-right: 0;
-}
-
-.portfolio__inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  cursor: -webkit-grabbing;
-  cursor: grabbing;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
 }
 
 .portfolio__item {
-  margin-right: 25px;
+  overflow: hidden;
+  max-width: calc(50% - 35px);
+  width: 100%;
+  position: relative;
+  margin-right: 35px;
+  margin-bottom: 40px;
+}
+
+.portfolio__item:hover .portfolio__descr {
+  opacity: 1;
+}
+
+.portfolio__link {
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 12;
+}
+
+.portfolio__descr {
+  padding: 25px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  left: 50%;
+  font-size: 36px;
+  background-color: rgba(0, 0, 0, 0.54);
+  color: #fff;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in;
+  -o-transition: opacity 0.3s ease-in;
+  transition: opacity 0.3s ease-in;
 }
 
 .portfolio__img {
-  margin-right: 20px;
-  max-width: 360px;
+  max-width: 500px;
+  width: 100%;
+  height: 250px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.mixitup-control-active {
-  -webkit-transition: color 0.3s ease-in-out, border 1.3s;
-  -o-transition: color 0.3s ease-in-out, border 1.3s;
-  transition: color 0.3s ease-in-out, border 1.3s;
-  color: #ffc107;
-  border: 2px solid #ffc107;
-}
-
 .services {
-  background-color: rgba(255, 193, 7, 0.5);
+  background-color: #999a9c;
+  color: #fff;
   text-align: left;
-  padding: 140px 0;
+  padding: 100px 0;
 }
 
 .services__wrapper {
@@ -2231,7 +2226,7 @@ body.ie ._ibg img {
 .price {
   background-color: #999A9C;
   color: #fff;
-  padding: 140px 0;
+  padding: 100px 0;
 }
 
 .price__control {
@@ -2364,7 +2359,7 @@ body.ie ._ibg img {
 }
 
 .contact {
-  padding: 140px 0;
+  padding: 100px 0;
   background-color: rgba(255, 193, 7, 0.5);
 }
 
@@ -2375,6 +2370,10 @@ body.ie ._ibg img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.contact__title-up {
+  text-transform: uppercase;
 }
 
 .contact__address {
@@ -2818,7 +2817,7 @@ body.ie ._ibg img {
   }
 
   .portfolio__img {
-    max-width: 260px;
+    height: 200px;
   }
 
   .services__img {
@@ -2869,14 +2868,9 @@ body.ie ._ibg img {
     max-width: 375px;
   }
 
-  .portfolio {
-    margin-bottom: 40px;
-    padding: 65px 0;
-  }
-
-  .portfolio__filter {
-    width: 100%;
-    margin: 0 0 5px 0;
+  .portfolio__item {
+    max-width: 100%;
+    margin-right: 0;
   }
 
   .services {
@@ -2921,6 +2915,10 @@ body.ie ._ibg img {
 }
 
 @media only screen and (max-width: 480px) {
+  .portfolio__img {
+    height: 160px;
+  }
+
   .services__img {
     max-width: 300px;
     max-height: 500px;
@@ -2943,18 +2941,6 @@ body.ie ._ibg img {
   .header__title {
     font-size: 36px;
     line-height: 40px;
-  }
-
-  .portfolio__inner {
-    margin-right: 0;
-  }
-
-  .portfolio__item {
-    margin-right: 0;
-  }
-
-  .portfolio__img {
-    max-width: 320px;
   }
 
   .form__inner {

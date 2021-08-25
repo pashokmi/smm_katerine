@@ -1,5 +1,5 @@
 .contact {
-  padding: 140px 0;
+  padding: 100px 0;
   
   background-color: $grey;
   @include media(768px){
@@ -12,6 +12,9 @@
       justify-content: center;
       flex-wrap: wrap;
     }
+  }
+  &__title-up{
+    text-transform: uppercase;
   }
   &__address {
     max-width: 530px;
