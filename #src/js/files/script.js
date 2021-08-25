@@ -40,4 +40,23 @@ popupOpen.addEventListener('click', () => {
   popupModal.classList.add('show');
 });
 
+
+
+ 
+   let swiper = new Swiper(".services__slider", {
+     effect: "cube",
+     grabCursor: true,
+     cubeEffect: {
+       shadow: true,
+       slideShadows: true,
+       shadowOffset: 20,
+       shadowScale: 0.94,
+     },
+     pagination: {
+       el: ".swiper-pagination",
+     },
+   }); 
+ 
+
+
 let mixer = mixitup('.portfolio');
