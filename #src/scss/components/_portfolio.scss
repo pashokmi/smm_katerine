@@ -1,41 +1,54 @@
 .portfolio {
-  background-color: rgba(255, 193, 7, 0.5);
+  
+  background-color: #999a9c;
+  color: $white;
   padding: 100px 0;
   text-align: center;
   &__items {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-right: -40px;
+    @include media(768px){
+      margin-right: 0;
+    }
   }
   &__item {
     overflow: hidden;
-    max-width: calc(50% - 35px);
+    max-width: calc(40% - 35px);
     width: 100%;
     position: relative;
-    margin-right: 35px;
-    margin-bottom: 40px;
-    &:hover {
-      .portfolio__descr {
-        opacity: 1;
-      }
-    }
+    margin: 0 35px 40px 0;
+    background-color: #333;
+    border: 10px solid #333;
+
     @include media(768px) {
-      max-width: 100%;
+      max-width: 80%;
       margin-right: 0;
     }
   }
   &__link {
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 12;
+    position: relative;
+    transition: background-color 0.3 ease-in;
+    &:hover {
+      .portfolio__descr {
+        opacity: 1;
+      }
+      .portfolio__img {
+        transition: all 0.7s ease-in;
+        transform: scale(1.1);
+      }
+    }
+    
+   
   }
   &__descr {
     padding: 25px;
     position: absolute;
-    top: 50%;
+    top: 110px;
     transform: translate(-50%, -50%);
     left: 50%;
     font-size: 36px;
-    background-color: rgba(0, 0, 0, 0.54);
     color: $white;
     opacity: 0;
     transition: opacity 0.3s ease-in;
@@ -45,11 +58,12 @@
     width: 100%;
     height: 250px;
     object-fit: cover;
-    @include media(992px) {
-      height: 200px;
+
+    @include media(768px) {
+      height: 180px;
     }
     @include media(480px) {
-      height: 160px;
+      height: 130px;
     }
   }
 }

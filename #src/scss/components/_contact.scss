@@ -41,6 +41,13 @@
   &__social {
     display: flex;
   }
+  &__social--top{
+    width: 100%;
+    justify-content: center;
+    .contact__social-link::before{
+      top: -20px;
+    }
+  }
   &__social-item {
     margin-right: 20px;
     width: 45px;

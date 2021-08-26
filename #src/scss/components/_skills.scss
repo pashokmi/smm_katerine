@@ -1,7 +1,6 @@
 .skills {
   padding: 100px 0;
-  background-color: #999a9c;
-  color: $white;
+  background-color: rgba(255, 193, 7, 0.5);
   @include media(768px) {
     padding: 65px 0;
   }
