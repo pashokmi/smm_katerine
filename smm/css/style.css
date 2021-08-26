@@ -2048,6 +2048,16 @@ button.swiper-pagination-bullet {
   font-size: 32px;
 }
 
+.game__new {
+  font-size: 18px;
+  background-color: #333;
+  padding: 0 20px;
+  border-radius: 20px;
+  color: #fff;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
 .start {
   font-size: 36px;
   color: #fff;
@@ -2148,6 +2158,7 @@ button.swiper-pagination-bullet {
           box-shadow: -8px -8px 20px #2a333d, 10px 7px 20px #475462;
   border-radius: 30px;
   overflow: hidden;
+  margin-bottom: 20px;
 }
 
 .circle {
