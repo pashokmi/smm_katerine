@@ -2402,17 +2402,11 @@ button.swiper-pagination-bullet {
 }
 
 @media only screen and (max-width: 768px) {
-  .header {
-    margin-bottom: 40px;
-  }
-
   .smm {
-    margin-bottom: 40px;
     padding: 65px 0;
   }
 
   .about {
-    margin-bottom: 40px;
     padding: 65px 0;
   }
 

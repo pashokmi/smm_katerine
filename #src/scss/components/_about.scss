@@ -2,7 +2,6 @@
   background-color: rgba(255, 193, 7, 0.5);
   padding: 100px 0;
   @include media(768px) {
-    margin-bottom: 40px;
     padding: 65px 0;
   }
   &__inner {
